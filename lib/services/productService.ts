@@ -8,9 +8,9 @@ const getLatest = cache(async () => {
   await dbConnect()
   const products = await ProductModel.find({
     $or: [
-      { banner: '/images/b1.png' },
-      { banner: '/images/b2.png' },
-      { banner: '/images/b4.png' },
+      { slug: 'Bread-Bread-Ciabata100g' },
+      { slug: 'Pastry-Cream-BananaCake' },
+      { slug: 'Sandwich-Sandwich-HamTomato' },
     ],
   })
     .sort({ _id: -1 })

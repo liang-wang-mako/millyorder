@@ -48,7 +48,7 @@ const data = {
       description: 'Ciabata 100g',
       rating: 4.5,
       numReviews: 5,
-      banner: '/images/ciabata100g.jpg',
+      banner: '/images/b1.png',
     },
     {
       name: 'Ciabata 300g',
@@ -70,7 +70,7 @@ const data = {
       description: 'Banana Cake',
       rating: 4.5,
       numReviews: 5,
-      banner: '/images/cananaCake.jpg',
+      banner: '/images/b2.png',
     },
     {
       name: 'Apple Slice',
@@ -191,7 +191,7 @@ const data = {
       description: 'Sandwich - Ham and Tomato',
       rating: 4.5,
       numReviews: 5,
-      banner: '/images/hamTomato.jpg',
+      banner: '/images/b4.png',
     },
   ],
 }
