@@ -6,7 +6,15 @@ export const revalidate = 3600
 
 const getLatest = cache(async () => {
   await dbConnect()
-  const products = await ProductModel.find({}).sort({ _id: -1 }).limit(4).lean()
+  const products = await ProductModel.find({
+    $or: [
+      { banner: '/images/b1.png' },
+      { banner: '/images/b2.png' },
+      { banner: '/images/b4.png' },
+    ],
+  })
+    .sort({ _id: -1 })
+    .lean()
   return products as Product[]
 })
 

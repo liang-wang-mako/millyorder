@@ -1,5 +1,4 @@
 import ProductItem from '@/components/products/ProductItem'
-import data from '../../lib/data'
 import { Metadata } from 'next'
 import productService from '../../lib/services/productService'
 import Link from 'next/link'
