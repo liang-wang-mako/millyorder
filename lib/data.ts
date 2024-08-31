@@ -1,4 +1,3 @@
-
 import bcrypt from 'bcryptjs'
 
 const data = {
@@ -7,14 +6,14 @@ const data = {
       name: 'Liang',
       email: 'lwang@micro-wang.com',
       password: bcrypt.hashSync('1234567'),
-      isAdmin: true
+      isAdmin: true,
     },
     {
       name: 'Asra',
       email: 'asra@mywhitecliffe.com',
       password: bcrypt.hashSync('123456'),
-      isAdmin: false
-    }
+      isAdmin: false,
+    },
   ],
   products: [
     {
@@ -48,7 +47,7 @@ const data = {
       description: 'Ciabata 100g',
       rating: 4.5,
       numReviews: 5,
-      banner: '/images/b1.png',
+      banner: '/images/b11.png',
     },
     {
       name: 'Ciabata 300g',
@@ -70,7 +69,7 @@ const data = {
       description: 'Banana Cake',
       rating: 4.5,
       numReviews: 5,
-      banner: '/images/b2.png',
+      banner: '/images/b22.png',
     },
     {
       name: 'Apple Slice',
@@ -191,7 +190,7 @@ const data = {
       description: 'Sandwich - Ham and Tomato',
       rating: 4.5,
       numReviews: 5,
-      banner: '/images/b4.png',
+      banner: '/images/b33.png',
     },
   ],
 }
