@@ -13,22 +13,7 @@ export default function OrderDetails({
 }: {
   orderId: string
 }) {
-  // const { trigger: deliverOrder, isMutating: isDelivering } = useSWRMutation(
-  //   `/api/orders/${orderId}`,
-  //   async (url) => {
-  //     const res = await fetch(`/api/admin/orders/${orderId}/deliver`, {
-  //       method: 'PUT',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //     })
-  //     const data = await res.json()
-  //     res.ok
-  //       ? toast.success('Order delivered successfully')
-  //       : toast.error(data.message)
-  //   }
-  // )
-
+  
   const { data: session } = useSession()
   console.log(session)
  
@@ -74,7 +59,7 @@ export default function OrderDetails({
 
           <div className="card bg-base-300 mt-4">
             <div className="card-body">
-              <h2 className="card-title">Payment Method</h2>
+              <h2 className="card-title">Payment</h2>
               <p>{paymentMethod}</p>
               {isPaid ? (
                 <div className="text-success">Paid at {paidAt}</div>
