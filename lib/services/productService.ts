@@ -31,10 +31,36 @@ const getBySlug = cache(async (slug: string) => {
   return product as Product
 })
 
+const getCategories = cache(async () => {
+  await dbConnect()
+  const categories = await ProductModel.find().distinct('category')
+  return categories
+})
+
+const getByQuery = cache(
+  async ({category,}: {category: string}) => {
+    await dbConnect()
+
+    const categoryFilter = category && category !== 'all' ? { category } : {}
+   
+    const categories = await ProductModel.find().distinct('category')
+    const products = await ProductModel.find(
+      {...categoryFilter,},
+    ).lean()
+
+    return {
+      products: products as Product[],
+      categories,
+    }
+  }
+)
+
 const productService = {
   getLatest,
   getAllProducts,
   getBySlug,
+  getCategories,
+  getByQuery,
 }
 
 export default productService

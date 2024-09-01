@@ -2,6 +2,7 @@ import ProductItem from '@/components/products/ProductItem'
 import { Metadata } from 'next'
 import productService from '../../lib/services/productService'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME || 'Milly Onlin Order',
