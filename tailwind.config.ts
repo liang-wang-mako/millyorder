@@ -1,23 +1,4 @@
-// import type { Config } from 'tailwindcss'
 
-// const config: Config = {
-//   content: [
-//     './pages/**/*.{js,ts,jsx,tsx,mdx}',
-//     './components/**/*.{js,ts,jsx,tsx,mdx}',
-//     './app/**/*.{js,ts,jsx,tsx,mdx}',
-//   ],
-//   theme: {
-//     extend: {
-//       backgroundImage: {
-//         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-//         'gradient-conic':
-//           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-//       },
-//     },
-//   },
-//   plugins: [require('daisyui')],
-// }
-// export default config
 
 import type { Config } from 'tailwindcss'
 
@@ -27,11 +8,25 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+
+  theme: {
+    extend: {
+      colors: {
+        vuejs: '#49e659',
+        breadorange: '#feca6d',
+        breadyellow: '#fedc7f',
+        cartnumber: '#fe1dc6',
+        logobg: '#004a87',
+      },
+    },
+  },
+
   daisyui: {
     themes: [
       {
         light: {
           ...require('daisyui/src/theming/themes')['light'],
+
           primary: '#fbbf24',
           '.toaster-con': {
             'background-color': 'white',
@@ -40,6 +35,7 @@ const config: Config = {
         },
         dark: {
           ...require('daisyui/src/theming/themes')['dark'],
+
           primary: '#fbbf24',
           '.toaster-con': {
             'background-color': 'black',
