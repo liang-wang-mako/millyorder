@@ -14,7 +14,7 @@ const ProductItem = ({ product }: { product: Product }) => {
             alt={product.name}
             width={300}
             height={300}
-            className="object-cover h-64 w-full pt-5 px-5 md:px-4 md:h-60 lg:px-4 lg:h-60 "
+            className="object-cover h-64 w-full pt-5 px-5"
           />
         </Link>
       </div>
