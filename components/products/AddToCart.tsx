@@ -18,9 +18,10 @@ export default function AddToCart({ item }: { item: OrderItem }) {
   }
 
   return existItem ? (
+   
     <div>
       <button
-        className="btn"
+        className="btn btn-ghost bg-breadorange hover:bg-mouseover"
         type="button"
         onClick={() => decrease(existItem)}
       >
@@ -28,7 +29,7 @@ export default function AddToCart({ item }: { item: OrderItem }) {
       </button>
       <span className="px-2">{existItem.qty}</span>
       <button
-        className="btn"
+        className="btn btn-ghost bg-breadorange hover:bg-mouseover"
         type="button"
         onClick={() => increase(existItem)}
       >
@@ -37,11 +38,12 @@ export default function AddToCart({ item }: { item: OrderItem }) {
     </div>
   ) : (
     <button
-      className="btn btnPrimary w-full"
+      className="btn btn-ghost btnPrimary w-full bg-breadorange hover:bg-mouseover"
       type="button"
       onClick={addToCartHandler}
     >
       Add to Cart
     </button>
+  
   )
 }

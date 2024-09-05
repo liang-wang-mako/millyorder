@@ -54,7 +54,7 @@ const Menu = () => {
 
           <li>
             <Link
-              className="btn btn-ghost gap-2 self-stretch p-2 my-auto font-bold text-black rounded-btn"
+              className="btn btn-ghost gap-2 self-stretch p-2 my-auto text-black rounded-btn"
               href="/faq"
             >
               FAQ
@@ -87,7 +87,7 @@ const Menu = () => {
                   </label>
                   <ul
                     tabIndex={0}
-                    className="menu dropdown-content z-[1] p-2 bg-[#feca6d] rounded-box w-52"
+                    className="menu dropdown-content z-[1] p-2 bg-breadorange rounded-box w-52"
                   >
                     <li>
                       <Link href="/order-list">Order List</Link>
@@ -110,8 +110,9 @@ const Menu = () => {
           ) : (
             <li>
               <button
-                className="btn btn-ghost bg-amber-200 rounded-btn"
+                className="btn btn-ghost text-black rounded-btn"
                 type="button"
+                onClick={()=>signIn()}
               >
                 Sign in
               </button>

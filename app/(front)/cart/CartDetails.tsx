@@ -20,15 +20,15 @@ const CartDetails = () => {
   }
 
   return (
-    <>
-      <h1 className="py-4 text-2xl">Order Cart</h1>
+    <article className="bg-breadorange mt-10 rounded-xl xs:mx-2 sm:mx-10 md:mx-20 lg:mx-30">
+      <h1 className="px-3 py-4 text-2xl">Order Cart</h1>
       {items.length === 0 ? (
         <div>
           Cart is empty.
           <Link href="/">Go shopping</Link>
         </div>
       ) : (
-        <div className="grid md:grid-cols-4 md:gap-5">
+        <div className="grid md:grid-cols-3 md:gap-5">
           <div className="overflow-x-auto md:col-span-3">
             <table className="table">
               <thead>
@@ -72,12 +72,12 @@ const CartDetails = () => {
                         +
                       </button>
                     </td>
-                    <td>{item.price}</td>
+                    <td>${item.price}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            <div className="card bg-base-300">
+            <div className="card bg-breadorange">
               <div className="card-body">
                 <ul>
                   <li>
@@ -86,12 +86,12 @@ const CartDetails = () => {
                       text-xl
                     >
                       Subtotal ({items.reduce((a, c) => a + c.qty, 0)}) :$
-                      {itemsPrice}
+                      {itemsPrice.toFixed(2)}
                     </div>
                   </li>
                   <li>
                     <button
-                      className="btn btn-primary w-full"
+                      className="btn btn-primary w-auto bg-breadyellow"
                       onClick={() => router.push('/shipping')}
                     >
                       Proceed to Checkout
@@ -103,7 +103,7 @@ const CartDetails = () => {
           </div>
         </div>
       )}
-    </>
+    </article>
   )
 }
 

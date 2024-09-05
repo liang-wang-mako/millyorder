@@ -71,9 +71,9 @@ const Form = () => {
   )
 
   return (
-    <div>
+    <article>
       <CheckoutSteps current={1} />
-      <div className="max-w-sm mx-auto card bg-base-300 my-4">
+      <div className="max-w-sm mx-auto card bg-breadorange my-4">
         <div className="card-body">
           <h1 className="card-title">Shipping Address</h1>
           <form onSubmit={handleSubmit(formSubmit)}>
@@ -106,7 +106,7 @@ const Form = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="btn btn-primary w-full"
+                className="btn btn-primary bg-breadyellow w-full"
               >
                 {isSubmitting && (
                   <span className="loading loading-spinner"></span>
@@ -117,7 +117,7 @@ const Form = () => {
           </form>
         </div>
       </div>
-    </div>
+    </article>
   )
 }
 export default Form

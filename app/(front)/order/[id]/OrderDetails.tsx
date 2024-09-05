@@ -40,8 +40,8 @@ export default function OrderDetails({
     <div>
       <h1 className="text-2xl py-4">Order {orderId}</h1>
       <div className="grid md:grid-cols-4 md:gap-5 my-4">
-        <div className="md:col-span-3">
-          <div className="card bg-base-300">
+        <div className="xs:mb-4 sm:mb-4 md:col-span-3">
+          <div className="card bg-breadorange">
             <div className="card-body">
               <h2 className="card-title">Shipping Address</h2>
               <p>{shippingAddress.fullName}</p>
@@ -57,7 +57,7 @@ export default function OrderDetails({
             </div>
           </div>
 
-          <div className="card bg-base-300 mt-4">
+          <div className="card bg-breadorange mt-4">
             <div className="card-body">
               <h2 className="card-title">Payment</h2>
               <p>{paymentMethod}</p>
@@ -69,7 +69,7 @@ export default function OrderDetails({
             </div>
           </div>
 
-          <div className="card bg-base-300 mt-4">
+          <div className="card bg-breadorange mt-4">
             <div className="card-body">
               <h2 className="card-title">Items</h2>
               <table className="table">
@@ -110,7 +110,7 @@ export default function OrderDetails({
         </div>
 
         <div>
-          <div className="card bg-base-300">
+          <div className="card bg-breadorange">
             <div className="card-body">
               <h2 className="card-title">Order Summary</h2>
               <ul>
@@ -129,7 +129,7 @@ export default function OrderDetails({
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Shipping</div>
-                    <div>${shippingPrice}</div>
+                    <div>${shippingPrice.toFixed(2)}</div>
                   </div>
                 </li>
                 <li>
@@ -139,21 +139,6 @@ export default function OrderDetails({
                   </div>
                 </li>
 
-                
-                {/* {session?.user.isAdmin && (
-                  <li>
-                    <button
-                      className="btn w-full my-2"
-                      onClick={() => deliverOrder()}
-                      disabled={isDelivering}
-                    >
-                      {isDelivering && (
-                        <span className="loading loading-spinner"></span>
-                      )}
-                      Mark as delivered
-                    </button>
-                  </li>
-                )} */}
               </ul>
             </div>
           </div>

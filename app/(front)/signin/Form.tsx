@@ -43,7 +43,7 @@ const Form = () => {
     })
   }
   return (
-    <div className="max-w-sm mx-auto card bg-base-300 my-4">
+    <div className="max-w-sm mx-auto card bg-breadorange my-4">
       <div className="card-body">
         <h1 className="card-title">Sign in</h1>
         {params.get('error') && (
@@ -99,11 +99,11 @@ const Form = () => {
               <div className="text-error">{errors.password.message}</div>
             )}
           </div>
-          <div className="my-4">
+          <div className="my-4 bg-breadyellow">
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn btnPrimary w-full"
+              className="btn btnPrimary w-full bg-breadyellow hover:bg-mouseover"
             >
               {isSubmitting && (
                 <span className="loading loading-spinner"></span>

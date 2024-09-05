@@ -76,7 +76,7 @@ const Form = () => {
     }
   }
   return (
-    <div className="max-w-sm  mx-auto card bg-base-300 my-4">
+    <div className="max-w-sm  mx-auto card bg-breadorange my-4">
       <div className="card-body">
         <h1 className="card-title">Profile</h1>
         <form onSubmit={handleSubmit(formSubmit)}>
@@ -166,7 +166,7 @@ const Form = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn btn-primary w-full"
+              className="btn btn-primary w-full  bg-breadyellow hover:bg-mouseover"
             >
               {isSubmitting && (
                 <span className="loading loading-spinner"></span>

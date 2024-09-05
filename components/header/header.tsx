@@ -10,13 +10,13 @@ const Header = () => {
         <div className="navbar justify-between bg-breadorange">
           <Link
             href="/"
-            className="btn btn-ghost bg-logobg  font-bold text-breadyellow text-2xl"
+            className="btn btn-ghost bg-logobg font-karantina font-bold text-breadyellow text-2xl"
           >
             Milly
           </Link>
           <Menu />
         </div>
-        <div className="bg-base-300 block sm:hidden text-center pb-3">
+        <div className="bg-breadorange block sm:hidden text-center pb-3">
           <SearchBox />
         </div>
       </nav>

@@ -4,9 +4,9 @@ const FAQ: React.FC = () => {
   return (
     <div className="flex overflow-hidden flex-col bg-white">
       {/* <Header /> */}
-      <main className="flex flex-col items-start self-center mx-40 mt-10 text-black bg-white w-auto max-sm:mx-5  max-md:mx-20">
-        <h1 className="p-5 text-left bg-breadorange rounded-xl max-md:max-w-auto">
-          <span className="text-3xl font-bold">
+      <main className="flex flex-col items-start mt-10 text-black bg-white w-auto xs:mx-2 sm:mx-20 md:mx-30 lg:mx-40">
+        <h1 className="px-2 py-5 text-left bg-breadorange rounded-xl max-w-auto xs:px-2 sm:px-5">
+          <span className="text-2xl font-bold md:text-3xl">
             Frequently Asked Questions:
           </span>
         </h1>

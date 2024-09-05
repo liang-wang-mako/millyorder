@@ -25,7 +25,7 @@ export default function OrderList() {
   }
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto bg-breadorange rounded-xl">
       <table className="table">
         <thead>
           <tr>
@@ -39,37 +39,25 @@ export default function OrderList() {
         </thead>
         <tbody>
           {orders.map((order: Order) => (
-            <tr key={order._id} onDoubleClick={(e) =>{ 
-              e.preventDefault()
-              e.stopPropagation()
-              handleDoubleClick(order._id)
-              }} >
+            <tr
+              key={order._id}
+              onDoubleClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                handleDoubleClick(order._id)
+              }}
+            >
               <td>{order._id.substring(20, 24)}</td>
               <td>{order.createdAt.substring(0, 10)}</td>
               <td>${order.totalPrice}</td>
-              <td>
-                {order.isPaid && order.paidAt
-                  ? 'yes'
-                  : 'no'}
-              </td>
-              <td>
-                {order.isDelivered && order.deliveredAt
-                  ? 'yes'
-                  : 'no'}
-              </td>
-              {/* <td>
-                <Link
-                  href={`/order/${order._id}`}
-                  passHref
-                >
-                  Details
-                </Link>
-              </td> */}
+              <td>{order.isPaid && order.paidAt ? 'yes' : 'no'}</td>
+              <td>{order.isDelivered && order.deliveredAt ? 'yes' : 'no'}</td>
+             
             </tr>
           ))}
         </tbody>
       </table>
-      <div>Note: Double click an order to view the order details.</div>
+      <div className="px-4 py-2">Note: Double click an order to view the order details.</div>
     </div>
   )
 }

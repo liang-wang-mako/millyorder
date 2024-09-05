@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import productService from '../../lib/services/productService'
 import Link from 'next/link'
 import Image from 'next/image'
+import { convertDocToObj } from '../../lib/utils'
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME || 'Milly Onlin Order',
@@ -36,7 +37,7 @@ export default async function Home() {
                 href={`#slide-${
                   index === 0 ? latestProducts.length - 1 : index - 1
                 }`}
-                className="btn btn-circle"
+                className="btn btn-xs btn-circle bg-breadyellow md:btn-sm lg:btn-sm"
               >
                 &#x276e;
               </a>
@@ -45,7 +46,7 @@ export default async function Home() {
                 href={`#slide-${
                   index === latestProducts.length - 1 ? 0 : index + 1
                 }`}
-                className="btn btn-circle"
+                className="btn btn-xs btn-circle bg-breadyellow md:btn-sm lg:btn-sm"
               >
                 &#x276f;
               </a>
@@ -55,11 +56,11 @@ export default async function Home() {
       </div>
 
       <h2 className="text-2xl py-2">Product List</h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cold-4">
+      <div className="grid gap-4 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-2 lg:grid-cols-4 lg:gap-2">
         {allProducts.map((p) => (
           <ProductItem
             key={p.slug}
-            product={p}
+            product={convertDocToObj(p)}
           />
         ))}
       </div>

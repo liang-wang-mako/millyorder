@@ -1,6 +1,6 @@
-
-
 import type { Config } from 'tailwindcss'
+
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 const config: Config = {
   content: [
@@ -10,13 +10,20 @@ const config: Config = {
   ],
 
   theme: {
+    screens: {
+      xs: '380px',
+      ...defaultTheme.screens,
+    },
     extend: {
+      fontFamily: {
+        karantina: ['Karantina',],
+      },
       colors: {
-        vuejs: '#49e659',
         breadorange: '#feca6d',
         breadyellow: '#fedc7f',
         cartnumber: '#fe1dc6',
         logobg: '#004a87',
+        mouseover: '#d0a966',
       },
     },
   },

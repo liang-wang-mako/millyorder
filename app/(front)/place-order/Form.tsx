@@ -50,10 +50,6 @@ const Form = () => {
   )
   useEffect(() => {
     
-    // if (!paymentMethod) {
-    //   return router.push('/payment')
-    // }
-
     if (items.length === 0) {
       return router.push('/')
     }
@@ -73,7 +69,7 @@ const Form = () => {
 
       <div className="grid md:grid-cols-4 md:gap-5 my-4">
         <div className="overflow-x-auto md:col-span-3">
-          <div className="card bg-base-300">
+          <div className="card bg-breadorange">
             <div className="card-body">
               <h2 className="card-title">Shipping Address</h2>
               <p>{shippingAddress.fullName}</p>
@@ -83,7 +79,7 @@ const Form = () => {
               </p>
               <div>
                 <Link
-                  className="btn"
+                  className="btn bg-breadyellow hover:bg-mouseover"
                   href="/shipping"
                 >
                   Edit
@@ -92,7 +88,7 @@ const Form = () => {
             </div>
           </div>
 
-          <div className="card bg-base-300 mt-4">
+          <div className="card bg-breadorange mt-4">
             <div className="card-body">
               <h2 className="card-title">Items</h2>
               <table className="table">
@@ -130,7 +126,7 @@ const Form = () => {
               </table>
               <div>
                 <Link
-                  className="btn"
+                  className="btn bg-breadyellow hover:bg-mouseover"
                   href="/cart"
                 >
                   Edit
@@ -141,7 +137,7 @@ const Form = () => {
         </div>
 
         <div>
-          <div className="card bg-base-300">
+          <div className="card bg-breadorange">
             <div className="card-body">
               <h2 className="card-title">Order Summary</h2>
               <ul className="space-y-3">
@@ -160,7 +156,7 @@ const Form = () => {
                 <li>
                   <div className=" flex justify-between">
                     <div>Shipping</div>
-                    <div>${shippingPrice}</div>
+                    <div>${shippingPrice.toFixed(2)}</div>
                   </div>
                 </li>
                 <li>
@@ -174,7 +170,7 @@ const Form = () => {
                   <button
                     onClick={() => placeOrder()}
                     disabled={isPlacing}
-                    className="btn btn-primary w-full"
+                    className="btn btn-primary w-full bg-breadyellow hover:bg-mouseover"
                   >
                     {isPlacing && (
                       <span className="loading loading-spinner"></span>
