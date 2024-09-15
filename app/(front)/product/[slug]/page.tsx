@@ -36,9 +36,9 @@ export default async function ProductDetails({
       <section className="my-2">
         <Link
           href="/"
-          className="btn btn-ghost bg-breadorange"
+          className="btn btn-ghost bg-breadorange hover:bg-mouseover"
         >
-          back to products
+          Back to Products
         </Link>
       </section>
       <section className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 md:gap-4">
