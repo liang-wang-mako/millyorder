@@ -57,7 +57,7 @@ const CartDetails = () => {
                     </td>
                     <td>
                       <button
-                        className="btn"
+                        className="btn bg-breadyellow hover:bg-mouseover"
                         type="button"
                         onClick={() => decrease(item)}
                       >
@@ -65,7 +65,7 @@ const CartDetails = () => {
                       </button>
                       <span className="px-2">{item.qty}</span>
                       <button
-                        className="btn"
+                        className="btn bg-breadyellow hover:bg-mouseover"
                         type="button"
                         onClick={() => increase(item)}
                       >

@@ -11,7 +11,6 @@ import Image from 'next/image'
 const Form = () => {
   const router = useRouter()
   const {
-    
     shippingAddress,
     items,
     itemsPrice,
