@@ -29,7 +29,7 @@ export const SearchBox = () => {
           ))}
         </select>
 
-        <button className="join-item btn btn-ghost bg-breadyellow">Search</button>
+        <button className="join-item btn btn-ghost bg-breadyellow">Filter</button>
       </div>
     </form>
   )

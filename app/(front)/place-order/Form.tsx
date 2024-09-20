@@ -135,7 +135,7 @@ const Form = () => {
           </div>
         </div>
 
-        <div>
+        <div className="xs:mt-4 sm:mt-4">
           <div className="card bg-breadorange">
             <div className="card-body">
               <h2 className="card-title">Order Summary</h2>

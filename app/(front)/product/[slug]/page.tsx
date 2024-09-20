@@ -1,5 +1,3 @@
-
-
 import AddToCart from '@/components/products/AddToCart'
 import { convertDocToObj } from '@/lib/utils'
 import productService from '@/lib/services/productService'
